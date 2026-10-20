@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pack walk in progress</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;background:#FFEFB3}
+a{color:#013E37}a:hover{color:#025A50}
+button{font-family:inherit;cursor:pointer}
+.num{font-variant-numeric:tabular-nums;letter-spacing:-0.04em}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; box-sizing: border-box; padding: 54px 20px 0; background: #FFEFB3; color: {{brand}}; font-family: Urbanist, system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<a href="Main.dc.html" aria-label="Back to home" style="width: 48px; height: 48px; flex-shrink: 0; box-sizing: border-box; border-radius: 24px; border: 1px solid rgba(1,62,55,0.08); background: #FFF8DE; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"></path></svg></a>
+<h1 style="margin: 0; font-size: 18px; font-weight: 800">Walking Milo</h1>
+<span style="height: 32px; padding: 0 12px; box-sizing: border-box; border-radius: 16px; border: 1px solid rgba(1,62,55,0.08); background: #FFF8DE; display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 800"><span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 4px; background: #FF9F5A"></span>Live</span>
+</header>
+
+<div style="position: relative; width: 300px; height: 300px; margin: 32px auto 0">
+<svg aria-hidden="true" width="300" height="300" viewBox="0 0 300 300" style="position: absolute; left: 0; top: 0">
+<circle cx="150" cy="150" r="130" fill="none" stroke="#F2E09D" stroke-width="16"></circle>
+<circle cx="150" cy="150" r="130" fill="none" stroke="{{brand}}" stroke-width="16" stroke-linecap="round" stroke-dasharray="816.81" stroke-dashoffset="{{ringOffset}}" transform="rotate(-90 150 150)"></circle>
+<circle cx="150" cy="150" r="104" fill="none" stroke="rgba(1,62,55,0.25)" stroke-width="3" stroke-linecap="round" stroke-dasharray="0.1 10.8"></circle>
+</svg>
+<div style="position: absolute; left: 0; top: 0; width: 300px; height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px">
+<span style="font-size: 14px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #4A6B65">{{statusLabel}}</span>
+<span class="num" style="font-size: 72px; font-weight: 800; line-height: 1">{{time}}</span>
+<span style="font-size: 15px; font-weight: 600; color: #4A6B65">of 30 min goal</span>
+</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 24px">
+<div style="box-sizing: border-box; border-radius: 22px; background: #FFF8DE; border: 1px solid rgba(1,62,55,0.08); padding: 14px; display: flex; flex-direction: column; gap: 4px">
+<span class="num" style="font-size: 24px; font-weight: 800; line-height: 1.1">9:22</span>
+<span style="font-size: 13px; font-weight: 600; color: #4A6B65">Started</span>
+</div>
+<div style="box-sizing: border-box; border-radius: 22px; background: #FFF8DE; border: 1px solid rgba(1,62,55,0.08); padding: 14px; display: flex; flex-direction: column; gap: 4px">
+<span style="font-size: 24px; font-weight: 800; line-height: 1.1">You</span>
+<span style="font-size: 13px; font-weight: 600; color: #4A6B65">Walker</span>
+</div>
+<div style="box-sizing: border-box; border-radius: 22px; background: #FFF8DE; border: 1px solid rgba(1,62,55,0.08); padding: 14px; display: flex; flex-direction: column; gap: 4px">
+<span class="num" style="font-size: 24px; font-weight: 800; line-height: 1.1">30 min</span>
+<span style="font-size: 13px; font-weight: 600; color: #4A6B65">Goal</span>
+</div>
+</div>
+
+<div style="margin-top: 12px; border-radius: 28px; background: {{brand}}; color: #FFEFB3; padding: 18px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; align-items: center; gap: 12px">
+<div aria-hidden="true" style="display: flex; flex-shrink: 0">
+<span style="width: 36px; height: 36px; box-sizing: border-box; border-radius: 18px; border: 2px solid {{brand}}; background: #FFEFB3; color: {{brand}}; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800">J</span>
+<span style="width: 36px; height: 36px; margin-left: -10px; box-sizing: border-box; border-radius: 18px; border: 2px solid {{brand}}; background: #C9CBA6; color: #013E37; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800">S</span>
+</div>
+<span style="font-size: 16px; font-weight: 800; line-height: 1.3">Everyone in your house can see Milo's out with you.</span>
+</div>
+<div style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: #B3BA8E">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>
+The timer keeps going if you lock your phone.
+</div>
+</div>
+
+<div style="position: absolute; left: 20px; right: 20px; bottom: 24px; display: flex; gap: 12px">
+<button onClick="{{toggle}}" style="width: 132px; height: 64px; flex-shrink: 0; box-sizing: border-box; border-radius: 32px; border: 1px solid rgba(1,62,55,0.08); background: #FFF8DE; color: {{brand}}; font-size: 17px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 8px">
+<sc-if value="{{running}}" hint-placeholder-val="{{ true }}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M9 6v12M15 6v12"></path></svg></sc-if>
+<sc-if value="{{paused}}" hint-placeholder-val="{{ false }}"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"></path></svg></sc-if>
+{{pauseLabel}}
+</button>
+<a href="Main.dc.html" style="flex: 1; height: 64px; border-radius: 32px; background: {{brand}}; color: #FFEFB3; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 18px; font-weight: 800">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="5" width="14" height="14" rx="3"></rect></svg>
+End walk
+</a>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#013E37","options":["#013E37","#1B2F4E","#3E1F3A","#3B2A20"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.tick = setInterval(() => {
+      const s = this.state || {};
+      if (s.paused) return;
+      this.setState({ secs: (s.secs ?? 1122) + 1 });
+    }, 1000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.tick);
+  }
+  renderVals() {
+    const s = this.state || {};
+    const secs = s.secs ?? 1122;
+    const paused = !!s.paused;
+    const mm = Math.floor(secs / 60);
+    const ss = secs % 60;
+    const C = 816.81;
+    const p = Math.min(secs / 1800, 1);
+    return {
+      brand: this.props.brand ?? '#013E37',
+      time: mm + ':' + String(ss).padStart(2, '0'),
+      ringOffset: (C * (1 - p)).toFixed(1),
+      paused: paused,
+      running: !paused,
+      statusLabel: paused ? 'Paused' : 'Walking',
+      pauseLabel: paused ? 'Resume' : 'Pause',
+      toggle: () => this.setState({ paused: !paused })
+    };
+  }
+}
+</script>
+</body>
+</html>
