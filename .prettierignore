@@ -1,0 +1,8 @@
+dist
+dev-dist
+design
+package-lock.json
+supabase/.temp
+.wrangler
+src/assets/fonts
+docs/SPEC.md
