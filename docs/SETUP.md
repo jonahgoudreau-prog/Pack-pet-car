@@ -37,7 +37,7 @@ The publishable key is safe to ship in the app. Row Level Security (coming in Ph
 
 These let GitHub Actions apply database changes when code lands on `main`, so you never need a laptop for migrations.
 
-1. In a new Safari tab, open **github.com/jonahgoudreau-prog/Pack-pet-car/settings/secrets/actions**. If GitHub's mobile layout won't show it, switch to the desktop site: open Safari's page menu (the icon at the left of the address bar, or **•••** on iOS 26) and tap **Request Desktop Website**.
+1. In a new Safari tab, open **github.com/jonahgoudreau-prog/Pack-pet-care/settings/secrets/actions**. If GitHub's mobile layout won't show it, switch to the desktop site: open Safari's page menu (the icon at the left of the address bar, or **•••** on iOS 26) and tap **Request Desktop Website**.
 2. On the **Secrets** tab, tap **New repository secret** twice:
    - Name `SUPABASE_ACCESS_TOKEN`, secret: the `sbp_…` token. Tap **Add secret**.
    - Name `SUPABASE_DB_PASSWORD`, secret: the database password from the Passwords app. Tap **Add secret**.
@@ -48,7 +48,7 @@ These let GitHub Actions apply database changes when code lands on `main`, so yo
 
 Cloudflare deploys whatever is on `main`, so the code needs to be there first.
 
-1. Open **github.com/jonahgoudreau-prog/Pack-pet-car**. Tap **Compare & pull request** on the yellow banner for `claude/new-session-890maj`. If there's no banner, go to **Pull requests → New pull request**, pick base `main` and compare `claude/new-session-890maj`. (You can also ask Claude to open the pull request.)
+1. Open **github.com/jonahgoudreau-prog/Pack-pet-care**. Tap **Compare & pull request** on the yellow banner for `claude/new-session-890maj`. If there's no banner, go to **Pull requests → New pull request**, pick base `main` and compare `claude/new-session-890maj`. (You can also ask Claude to open the pull request.)
 2. Tap **Create pull request**. Wait for the **CI** check to turn green, then tap **Merge pull request → Confirm merge**.
 3. Open the **Actions** tab. Within about two minutes, **CI** and **Deploy Supabase** should both be green. If **Deploy Supabase** is red, open it and read the failed step. It's almost always a typo in one of the three values from step 2. Fix the value, then tap **Re-run jobs**.
 
@@ -56,8 +56,8 @@ Cloudflare deploys whatever is on `main`, so the code needs to be there first.
 
 1. In Safari, go to **dash.cloudflare.com/sign-up**, create a free account, and verify your email. If it offers to add a domain, skip it.
 2. Open **Workers & Pages**. On a phone it's in the menu (☰), sometimes under **Compute**. You can also go straight to **dash.cloudflare.com/?to=/:account/workers-and-pages**.
-3. Tap **Create application**, then **GitHub**. Approve the **Cloudflare Workers and Pages** GitHub app. Choose **Only select repositories → Pack-pet-car**, then **Install & Authorize**.
-4. Pick **Pack-pet-car** from the list and fill in:
+3. Tap **Create application**, then **GitHub**. Approve the **Cloudflare Workers and Pages** GitHub app. Choose **Only select repositories → Pack-pet-care**, then **Install & Authorize**.
+4. Pick **Pack-pet-care** from the list and fill in:
    - **Project name:** `pack`, exactly. It has to match `wrangler.jsonc`, or the build fails.
    - **Build command:** `npm run build`
    - **Deploy command:** leave the default, `npx wrangler deploy`.
