@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pack Setup</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#013E37}a:hover{color:#4A6B65}
+.num{font-weight:800;letter-spacing:-0.04em;font-variant-numeric:tabular-nums}
+button{font-family:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="width:405px;height:720px;box-sizing:border-box;background:#FFEFB3;font-family:Urbanist,sans-serif;color:#013E37;padding:44px 24px 24px;display:flex;flex-direction:column;gap:18px">
+
+<div style="display:flex;flex-direction:column;gap:12px">
+<div style="font-size:14px;font-weight:700;color:#4A6B65">Step 2 of 2</div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px">
+<span style="height:6px;border-radius:999px;background:#013E37"></span>
+<span style="height:6px;border-radius:999px;background:#013E37"></span>
+</div>
+<div style="font-size:30px;font-weight:800;letter-spacing:-0.02em;line-height:1.1">Bring your<br>household in</div>
+<div style="font-size:16px;font-weight:500;color:#4A6B65;line-height:1.4">Everyone who feeds or walks Milo should join, so nobody feeds him twice.</div>
+</div>
+
+<div style="background:#013E37;color:#FFEFB3;border-radius:28px;padding:22px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center">
+<div style="font-size:14px;font-weight:700;color:#B3BA8E">Invite code</div>
+<div class="num" style="font-size:48px;line-height:1;letter-spacing:0.12em">K7Q-4MP</div>
+<div style="font-size:14px;font-weight:600;color:#B3BA8E">Expires in 7 days</div>
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%">
+<button style="height:52px;border-radius:999px;border:none;background:#FFEFB3;color:#013E37;font-size:16px;font-weight:800">Share</button>
+<button style="height:52px;border-radius:999px;border:none;background:rgba(255,239,179,0.14);color:#FFEFB3;font-size:16px;font-weight:800">Copy</button>
+</div>
+</div>
+
+<div style="display:flex;align-items:center;gap:14px;background:#FFF8DE;border:1px solid rgba(1,62,55,0.08);border-radius:22px;padding:14px 16px">
+<span style="width:32px;height:32px;border-radius:999px;background:#013E37;color:#FFEFB3;display:flex;align-items:center;justify-content:center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg></span>
+<div style="display:flex;flex-direction:column"><span style="font-size:16px;font-weight:700">Reminders on</span><span style="font-size:14px;color:#4A6B65">We'll nudge you if a meal is late</span></div>
+</div>
+
+<button style="margin-top:auto;height:56px;border-radius:999px;border:none;background:#013E37;color:#FFEFB3;font-size:17px;font-weight:800">Done</button>
+<button style="height:44px;border-radius:999px;border:none;background:transparent;color:#4A6B65;font-size:16px;font-weight:700">I'll do this later</button>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":405,"height":720}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

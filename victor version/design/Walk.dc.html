@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pack Walk</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#013E37}a:hover{color:#4A6B65}
+.num{font-weight:800;letter-spacing:-0.04em;font-variant-numeric:tabular-nums}
+button{font-family:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="width:405px;height:720px;box-sizing:border-box;background:#FFEFB3;font-family:Urbanist,sans-serif;color:#013E37;padding:44px 20px 28px;display:flex;flex-direction:column;gap:16px">
+
+<div style="display:flex;justify-content:space-between;align-items:center">
+<a href="Main.dc.html" aria-label="Back to Home" style="width:44px;height:44px;border-radius:999px;background:#FFF8DE;border:1px solid rgba(1,62,55,0.08);display:flex;align-items:center;justify-content:center;box-sizing:border-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg></a>
+<div style="font-size:16px;font-weight:700">Walking Milo</div>
+<div style="width:44px"></div>
+</div>
+
+<div style="position:relative;width:244px;height:244px;align-self:center">
+<svg width="244" height="244" viewBox="0 0 300 300" role="img" aria-label="38 of 60 minutes walked today">
+<circle cx="150" cy="150" r="128" fill="none" stroke="#FFF8DE" stroke-width="26"></circle>
+<circle cx="150" cy="150" r="128" fill="none" stroke="#013E37" stroke-width="26" stroke-linecap="round" stroke-dasharray="507 804" transform="rotate(-90 150 150)"></circle>
+</svg>
+<div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px">
+<div class="num" style="font-size:58px;line-height:1">12:04</div>
+<div style="font-size:15px;font-weight:600;color:#4A6B65">this walk</div>
+</div>
+</div>
+
+<div style="text-align:center;font-size:17px;font-weight:700"><span class="num">38</span> of <span class="num">60</span> min today</div>
+
+<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px">
+<div style="background:#FFF8DE;border:1px solid rgba(1,62,55,0.08);border-radius:22px;padding:14px;display:flex;flex-direction:column;gap:4px">
+<div style="font-size:13px;font-weight:600;color:#4A6B65">Started</div>
+<div class="num" style="font-size:20px">5:16 PM</div>
+</div>
+<div style="background:#FFF8DE;border:1px solid rgba(1,62,55,0.08);border-radius:22px;padding:14px;display:flex;flex-direction:column;gap:4px">
+<div style="font-size:13px;font-weight:600;color:#4A6B65">Walker</div>
+<div style="font-size:20px;font-weight:800">Victor</div>
+</div>
+<div style="background:#FFF8DE;border:1px solid rgba(1,62,55,0.08);border-radius:22px;padding:14px;display:flex;flex-direction:column;gap:4px">
+<div style="font-size:13px;font-weight:600;color:#4A6B65">Goal</div>
+<div class="num" style="font-size:20px">60 min</div>
+</div>
+</div>
+
+<div style="margin-top:auto;display:flex;flex-direction:column;gap:10px">
+<button style="height:64px;border-radius:999px;border:none;background:#013E37;color:#FFEFB3;font-size:19px;font-weight:800">End walk</button>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":405,"height":720}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

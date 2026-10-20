@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pack History</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#013E37}a:hover{color:#4A6B65}
+.num{font-weight:800;letter-spacing:-0.04em;font-variant-numeric:tabular-nums}
+button{font-family:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="width:405px;height:720px;box-sizing:border-box;background:#FFEFB3;font-family:Urbanist,sans-serif;color:#013E37;padding:44px 20px 24px;overflow:hidden;display:flex;flex-direction:column;gap:14px">
+
+<div style="font-size:30px;font-weight:800;letter-spacing:-0.02em">History</div>
+
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<button style="height:38px;padding:0 16px;border-radius:999px;border:none;background:#013E37;color:#FFEFB3;font-size:14px;font-weight:700">All</button>
+<button style="height:38px;padding:0 16px;border-radius:999px;border:1px solid rgba(1,62,55,0.08);background:#FFF8DE;color:#013E37;font-size:14px;font-weight:600">Meals</button>
+<button style="height:38px;padding:0 16px;border-radius:999px;border:1px solid rgba(1,62,55,0.08);background:#FFF8DE;color:#013E37;font-size:14px;font-weight:600">Walks</button>
+<button style="height:38px;padding:0 16px;border-radius:999px;border:1px solid rgba(1,62,55,0.08);background:#FFF8DE;color:#013E37;font-size:14px;font-weight:600">Meds</button>
+</div>
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:6px">
+<span style="font-size:17px;font-weight:800">Yesterday</span><span style="font-size:14px;font-weight:600;color:#4A6B65">2/2 meals · 64 min</span>
+</div>
+<div style="background:#FFF8DE;border:1px solid rgba(1,62,55,0.08);border-radius:22px;display:flex;flex-direction:column">
+<div style="display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid rgba(1,62,55,0.08)"><span class="num" style="width:62px;font-size:15px;color:#4A6B65">8:00 PM</span><span style="font-size:15px;font-weight:600">Ava gave Apoquel</span></div>
+<div style="display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid rgba(1,62,55,0.08)"><span class="num" style="width:62px;font-size:15px;color:#4A6B65">6:04 PM</span><span style="font-size:15px;font-weight:600">Victor fed dinner</span></div>
+<div style="display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid rgba(1,62,55,0.08)"><span class="num" style="width:62px;font-size:15px;color:#4A6B65">4:30 PM</span><span style="font-size:15px;font-weight:600">Sam walked Milo · 41 min</span></div>
+<div style="display:flex;gap:12px;padding:14px 16px"><span class="num" style="width:62px;font-size:15px;color:#4A6B65">7:35 AM</span><span style="font-size:15px;font-weight:600">Sam fed breakfast</span></div>
+</div>
+
+<div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:6px">
+<span style="font-size:17px;font-weight:800">Sun, Oct 18</span><span style="font-size:14px;font-weight:700;color:#013E37;background:#FF9F5A;border-radius:999px;padding:3px 10px">3 meals</span>
+</div>
+<div style="background:#FFF8DE;border:1px solid rgba(1,62,55,0.08);border-radius:22px;display:flex;flex-direction:column">
+<div style="display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid rgba(1,62,55,0.08)"><span class="num" style="width:62px;font-size:15px;color:#4A6B65">6:40 PM</span><span style="font-size:15px;font-weight:600">Ava fed dinner <span style="color:#4A6B65">· extra</span></span></div>
+<div style="display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid rgba(1,62,55,0.08)"><span class="num" style="width:62px;font-size:15px;color:#4A6B65">5:55 PM</span><span style="font-size:15px;font-weight:600">Victor fed dinner</span></div>
+<div style="display:flex;gap:12px;padding:14px 16px"><span class="num" style="width:62px;font-size:15px;color:#4A6B65">7:50 AM</span><span style="font-size:15px;font-weight:600">Sam fed breakfast</span></div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":405,"height":720}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

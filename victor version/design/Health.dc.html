@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pack Health</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#013E37}a:hover{color:#4A6B65}
+.num{font-weight:800;letter-spacing:-0.04em;font-variant-numeric:tabular-nums}
+button{font-family:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="width:405px;height:720px;box-sizing:border-box;background:#FFEFB3;font-family:Urbanist,sans-serif;color:#013E37;padding:44px 24px 24px;display:flex;flex-direction:column;gap:14px">
+
+<div style="display:flex;justify-content:space-between;align-items:flex-end">
+<div style="display:flex;flex-direction:column;gap:2px">
+<div style="font-size:14px;font-weight:600;color:#4A6B65">Last 14 days</div>
+<div style="font-size:26px;font-weight:800;letter-spacing:-0.02em">Milo's health</div>
+</div>
+<div style="display:flex;flex-direction:column;align-items:flex-end">
+<span class="num" style="font-size:30px;line-height:1">86<span style="font-size:14px;color:#4A6B65;letter-spacing:0"> /100</span></span>
+<span style="font-size:12px;font-weight:700;color:#4A6B65">care score</span>
+</div>
+</div>
+
+<div style="background:#FF9F5A;color:#013E37;border-radius:22px;padding:14px 16px;display:flex;flex-direction:column;gap:4px">
+<span style="font-size:16px;font-weight:800">Milo's eating less than usual</span>
+<span style="font-size:14px;font-weight:600;line-height:1.35">He left food 3 times this week, up from 0 last week. Worth mentioning to your vet if it keeps up.</span>
+</div>
+
+<div style="background:#FFF8DE;border:1px solid rgba(1,62,55,0.08);border-radius:24px;padding:16px;display:flex;flex-direction:column;gap:12px">
+<div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font-size:15px;font-weight:800">Appetite</span><span style="font-size:13px;font-weight:600;color:#4A6B65">per day</span></div>
+<div style="display:flex;align-items:flex-end;gap:5px;height:64px" role="img" aria-label="Appetite over 14 days: ate everything most days, left some food on 3 recent days and none once">
+<span style="flex:1;height:100%;background:#013E37;border-radius:4px"></span>
+<span style="flex:1;height:100%;background:#013E37;border-radius:4px"></span>
+<span style="flex:1;height:100%;background:#013E37;border-radius:4px"></span>
+<span style="flex:1;height:100%;background:#013E37;border-radius:4px"></span>
+<span style="flex:1;height:100%;background:#013E37;border-radius:4px"></span>
+<span style="flex:1;height:100%;background:#013E37;border-radius:4px"></span>
+<span style="flex:1;height:100%;background:#013E37;border-radius:4px"></span>
+<span style="flex:1;height:100%;background:#013E37;border-radius:4px"></span>
+<span style="flex:1;height:100%;background:#013E37;border-radius:4px"></span>
+<span style="flex:1;height:55%;background:#FF9F5A;border-radius:4px"></span>
+<span style="flex:1;height:100%;background:#013E37;border-radius:4px"></span>
+<span style="flex:1;height:55%;background:#FF9F5A;border-radius:4px"></span>
+<span style="flex:1;height:18%;background:#FF9F5A;border-radius:4px"></span>
+<span style="flex:1;height:100%;background:#013E37;border-radius:4px"></span>
+</div>
+<div style="display:flex;gap:14px;font-size:12px;font-weight:700;color:#4A6B65">
+<span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:3px;background:#013E37"></span>Ate all</span>
+<span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:6px;border-radius:2px;background:#FF9F5A"></span>Left some</span>
+<span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:3px;border-radius:2px;background:#FF9F5A"></span>Barely ate</span>
+</div>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px">
+<div style="background:#FFF8DE;border:1px solid rgba(1,62,55,0.08);border-radius:22px;padding:14px;display:flex;flex-direction:column;gap:2px">
+<span style="font-size:13px;font-weight:700;color:#4A6B65">Walks / day</span>
+<span class="num" style="font-size:26px">48<span style="font-size:13px;color:#4A6B65;letter-spacing:0"> min</span></span>
+<span style="font-size:13px;font-weight:700;color:#4A6B65">Down 9 min from last week</span>
+</div>
+<div style="background:#FFF8DE;border:1px solid rgba(1,62,55,0.08);border-radius:22px;padding:14px;display:flex;flex-direction:column;gap:2px">
+<span style="font-size:13px;font-weight:700;color:#4A6B65">Meds given</span>
+<span class="num" style="font-size:26px">14<span style="font-size:13px;color:#4A6B65;letter-spacing:0"> / 14</span></span>
+<span style="font-size:13px;font-weight:700;color:#4A6B65">No missed doses</span>
+</div>
+</div>
+
+<div style="margin-top:auto;display:flex;flex-direction:column;gap:8px">
+<button style="height:56px;border-radius:999px;border:none;background:#013E37;color:#FFEFB3;font-size:17px;font-weight:800">Create vet report</button>
+<div style="text-align:center;font-size:12px;font-weight:600;color:#4A6B65">Based on what's been logged. Not medical advice.</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":405,"height":720}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+# Pack (Expo app in "victor version/")
+# 1. Every push: type-check, lint and tests.
+# 2. Pushes to main or victor-version: publish an EAS Update that opens in Expo Go.
+#    Publishing is skipped until the EXPO_TOKEN secret and EAS_PROJECT_ID variable exist.
+name: Pack app
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: pack-app-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: victor version
+
+jobs:
+  check:
+    name: Type-check, lint, test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: victor version/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test -- --ci
+
+  publish:
+    name: Publish to Expo Go
+    needs: check
+    if: github.event_name != 'pull_request' && (github.ref_name == 'main' || github.ref_name == 'victor-version')
+    runs-on: ubuntu-latest
+    env:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+      EAS_PROJECT_ID: ${{ vars.EAS_PROJECT_ID }}
+      EXPO_OWNER: ${{ vars.EXPO_OWNER }}
+      CHANNEL: preview
+    steps:
+      - name: Check setup
+        id: gate
+        # Runs before checkout, so the app folder doesn't exist yet.
+        working-directory: ${{ github.workspace }}
+        run: |
+          if [ -z "$EXPO_TOKEN" ] || [ -z "$EAS_PROJECT_ID" ]; then
+            echo "::notice::Not publishing yet. Add the EXPO_TOKEN secret and the EAS_PROJECT_ID variable (see victor version/SETUP.md)."
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.ready == 'true'
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.ready == 'true'
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: victor version/package-lock.json
+      - uses: expo/expo-github-action@v8
+        if: steps.gate.outputs.ready == 'true'
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+      - run: npm ci
+        if: steps.gate.outputs.ready == 'true'
+
+      - name: Publish update
+        if: steps.gate.outputs.ready == 'true'
+        env:
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message || 'Manual publish' }}
+          EXPO_PUBLIC_COMMIT_SHA: ${{ github.sha }}
+        run: |
+          export EXPO_PUBLIC_PUBLISHED_AT="$(TZ=America/New_York date '+%b %-d, %-I:%M %p')"
+          MESSAGE="$(printf '%s' "$COMMIT_MESSAGE" | head -n 1)"
+          eas update --channel "$CHANNEL" --environment preview --platform ios \
+            --message "$MESSAGE" --non-interactive --json > "$RUNNER_TEMP/update.json"
+          cat "$RUNNER_TEMP/update.json"
+
+      - name: Write the Expo Go link
+        if: steps.gate.outputs.ready == 'true'
+        run: |
+          RUNTIME="$(node -e "const u=require(process.argv[1]);console.log(u[0].runtimeVersion)" "$RUNNER_TEMP/update.json")"
+          GROUP="$(node -e "const u=require(process.argv[1]);console.log(u[0].group)" "$RUNNER_TEMP/update.json")"
+          LATEST="exp://u.expo.dev/$EAS_PROJECT_ID?runtime-version=$RUNTIME&channel-name=$CHANNEL"
+          QR="https://qr.expo.dev/eas-update?slug=exp&projectId=$EAS_PROJECT_ID&runtimeVersion=$RUNTIME&channel=$CHANNEL"
+          {
+            echo "## Open Pack in Expo Go"
+            echo ""
+            echo "Copy this link, paste it into Safari's address bar on your iPhone, and tap **Open** when Safari asks about Expo Go."
+            echo "It always opens the latest version, so you only need to do this once."
+            echo ""
+            echo '```'
+            echo "$LATEST"
+            echo '```'
+            echo ""
+            echo "Update group: \`$GROUP\` · Runtime: \`$RUNTIME\` · Commit: \`${GITHUB_SHA::7}\`"
+            echo ""
+            echo "<img src=\"$QR\" width=\"220\" alt=\"QR code for Expo Go\">"
+          } >> "$GITHUB_STEP_SUMMARY"
