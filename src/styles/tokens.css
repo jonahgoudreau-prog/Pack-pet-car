@@ -1,0 +1,73 @@
+/* Pack design tokens. Light mode only for v1. */
+:root {
+  /* Palette */
+  --color-butter: #ffefb3;
+  --color-cream: #fff8de;
+  --color-green: #013e37;
+  --color-muted: #4a6b65;
+  --color-muted-on-green: #b3ba8e;
+  --color-tangerine: #ff9f5a;
+  --color-khaki: #c9cba6;
+  --color-hairline: rgba(1, 62, 55, 0.08);
+  --color-butter-tint: rgba(255, 239, 179, 0.14);
+  --color-ring-track: #f2e09d;
+  --color-dashed: #6e8a82;
+
+  /* Roles */
+  --bg-app: var(--color-butter);
+  --text: var(--color-green);
+  --text-muted: var(--color-muted);
+  --surface: var(--color-cream);
+  --surface-strong: var(--color-green);
+  --text-on-strong: var(--color-butter);
+  --text-muted-on-strong: var(--color-muted-on-green);
+  --border-hairline: 1px solid var(--color-hairline);
+
+  /* Type */
+  --font-sans: 'Urbanist', system-ui, -apple-system, sans-serif;
+  --text-2xs: 11px;
+  --text-xs: 13px;
+  --text-sm: 14px;
+  --text-body: 15px;
+  --text-md: 16px;
+  --text-lg: 17px;
+  --text-xl: 20px;
+  --text-2xl: 30px;
+  --text-stat: 44px;
+  --text-hero: 92px;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-heavy: 800;
+  --tracking-tight: -0.02em;
+  --tracking-num: -0.04em;
+  --tracking-caps: 0.08em;
+
+  /* Shape */
+  --radius-hero: 32px;
+  --radius-card: 28px;
+  --radius-row: 22px;
+  --radius-pill: 999px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --gutter: 20px;
+
+  /* Sizes */
+  --tap-min: 44px;
+  --button-height: 56px;
+
+  /* Elevation */
+  --shadow-nav: 0 10px 28px rgba(1, 62, 55, 0.22);
+  --shadow-toast: 0 12px 30px rgba(1, 62, 55, 0.28);
+
+  /* Safe areas */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+}

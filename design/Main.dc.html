@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pack home</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&amp;display=swap">
+<style>
+body{margin:0;background:#FFEFB3}
+a{color:#013E37}a:hover{color:#025A50}
+button{font-family:inherit;cursor:pointer}
+.num{font-variant-numeric:tabular-nums;letter-spacing:-0.04em}
+.dots{background-image:radial-gradient(circle, rgba(255,239,179,0.16) 1.6px, transparent 1.9px);background-size:10px 10px;-webkit-mask-image:radial-gradient(circle at 70% 30%, #000 0%, rgba(0,0,0,0.55) 40%, transparent 72%);mask-image:radial-gradient(circle at 70% 30%, #000 0%, rgba(0,0,0,0.55) 40%, transparent 72%)}
+.navfade{background:linear-gradient(to bottom, rgba(255,239,179,0) 0%, #FFEFB3 60%)}
+</style>
+</helmet>
+<div style="width: 390px; height: 844px; position: relative; overflow: hidden; box-sizing: border-box; padding: 54px 20px 0; background: #FFEFB3; color: {{brand}}; font-family: Urbanist, system-ui, sans-serif">
+
+<header style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 2px">
+<div style="font-size: 15px; font-weight: 600; color: #4A6B65">Tuesday, Oct 20</div>
+<h1 style="margin: 0; font-size: 30px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.15">Morning, Jonah</h1>
+</div>
+<button aria-label="Notifications" style="width: 48px; height: 48px; flex-shrink: 0; padding: 0; box-sizing: border-box; border-radius: 24px; border: 1px solid rgba(1,62,55,0.08); background: #FFF8DE; color: {{brand}}; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"></path><path d="M10 21h4"></path></svg>
+</button>
+</header>
+
+<div style="display: flex; align-items: center; gap: 8px; margin-top: 16px">
+<button aria-pressed="true" style="height: 44px; padding: 0 18px 0 6px; border: none; border-radius: 22px; background: {{brand}}; color: #FFEFB3; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 800">
+<span aria-hidden="true" style="width: 32px; height: 32px; border-radius: 16px; background: #FFEFB3; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="10.5" r="2.1"></circle><circle cx="9.8" cy="6" r="2.1"></circle><circle cx="14.2" cy="6" r="2.1"></circle><circle cx="18" cy="10.5" r="2.1"></circle><path d="M12 12c-2.8 0-5.5 3.4-5.5 5.7 0 1.6 1.3 2.4 2.8 2.4 1.1 0 1.8-.6 2.7-.6s1.6.6 2.7.6c1.5 0 2.8-.8 2.8-2.4 0-2.3-2.7-5.7-5.5-5.7z"></path></svg></span>
+Milo
+</button>
+<button aria-pressed="false" style="height: 44px; padding: 0 18px 0 6px; box-sizing: border-box; border: 1px solid rgba(1,62,55,0.08); border-radius: 22px; background: #FFF8DE; color: {{brand}}; display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700">
+<span aria-hidden="true" style="width: 32px; height: 32px; border-radius: 16px; background: #FFEFB3; color: #4A6B65; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="10.5" r="2.1"></circle><circle cx="9.8" cy="6" r="2.1"></circle><circle cx="14.2" cy="6" r="2.1"></circle><circle cx="18" cy="10.5" r="2.1"></circle><path d="M12 12c-2.8 0-5.5 3.4-5.5 5.7 0 1.6 1.3 2.4 2.8 2.4 1.1 0 1.8-.6 2.7-.6s1.6.6 2.7.6c1.5 0 2.8-.8 2.8-2.4 0-2.3-2.7-5.7-5.5-5.7z"></path></svg></span>
+Luna
+</button>
+<button aria-label="Add a pet" style="width: 44px; height: 44px; padding: 0; box-sizing: border-box; border: 1.5px dashed #6E8A82; border-radius: 22px; background: transparent; color: #4A6B65; display: flex; align-items: center; justify-content: center">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>
+</button>
+</div>
+
+<section aria-label="Meals today" style="position: relative; overflow: hidden; margin-top: 14px; border-radius: 32px; padding: 20px; background: {{brand}}; color: #FFEFB3">
+<div class="dots" aria-hidden="true" style="position: absolute; top: -24px; right: -24px; width: 230px; height: 230px"></div>
+<div style="position: relative; display: flex; align-items: center; justify-content: space-between">
+<span style="height: 36px; padding: 0 14px; border-radius: 18px; background: rgba(255,239,179,0.14); display: flex; align-items: center; font-size: 15px; font-weight: 700">Milo's meals</span>
+<span aria-hidden="true" style="width: 40px; height: 40px; border-radius: 20px; background: #FFEFB3; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 7 0 0 1-18 0z"></path><path d="M8 7.5h.01M12 6h.01M16 7.5h.01"></path></svg></span>
+</div>
+<div style="position: relative; display: flex; align-items: flex-end; gap: 16px; margin-top: 10px">
+<div class="num" style="display: flex; align-items: baseline; font-weight: 800; line-height: 0.85">
+<span style="font-size: 92px">{{fedCount}}</span><span style="font-size: 34px; color: #B3BA8E">/2</span>
+</div>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px; padding-bottom: 2px">
+<div style="display: flex; align-items: center; gap: 10px">
+<span aria-hidden="true" style="width: 24px; height: 24px; flex-shrink: 0; border-radius: 12px; background: #FFEFB3; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+<div style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 800">Breakfast</span><span style="font-size: 13px; font-weight: 600; color: #B3BA8E">7:42 AM · You</span></div>
+</div>
+<sc-if value="{{dinner}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; align-items: center; gap: 10px">
+<span aria-hidden="true" style="width: 24px; height: 24px; flex-shrink: 0; border-radius: 12px; background: #FFEFB3; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg></span>
+<div style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 800">Dinner</span><span style="font-size: 13px; font-weight: 600; color: #B3BA8E">Just now · You</span></div>
+</div>
+</sc-if>
+<sc-if value="{{notDinner}}" hint-placeholder-val="{{ true }}">
+<div style="display: flex; align-items: center; gap: 10px">
+<span aria-hidden="true" style="width: 24px; height: 24px; flex-shrink: 0; box-sizing: border-box; border-radius: 12px; border: 2.5px solid #FFEFB3"></span>
+<div style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 800">Dinner</span><span style="font-size: 13px; font-weight: 600; color: #B3BA8E">Due 6:00 PM</span></div>
+</div>
+</sc-if>
+</div>
+</div>
+<sc-if value="{{notDinner}}" hint-placeholder-val="{{ true }}">
+<button onClick="{{feed}}" style="position: relative; margin-top: 16px; width: 100%; height: 56px; border: none; border-radius: 28px; background: #FFEFB3; color: {{brand}}; font-size: 17px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 10px">
+<svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 7 0 0 1-18 0z"></path><path d="M8 7.5h.01M12 6h.01M16 7.5h.01"></path></svg>
+Feed dinner
+</button>
+</sc-if>
+<sc-if value="{{dinner}}" hint-placeholder-val="{{ false }}">
+<div style="position: relative; margin-top: 16px; height: 56px; border-radius: 28px; background: rgba(255,239,179,0.14); font-size: 17px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 10px">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>
+All fed today
+</div>
+</sc-if>
+</section>
+
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px">
+<a href="Walk.dc.html" aria-label="Walks: 24 minutes today. Open walk" style="text-decoration: none; color: {{brand}}; box-sizing: border-box; border-radius: 28px; background: #FFF8DE; border: 1px solid rgba(1,62,55,0.08); padding: 16px; display: flex; flex-direction: column">
+<div style="height: 20px; display: flex; align-items: center; justify-content: space-between">
+<span style="display: flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 700; color: #4A6B65"><span style="display: flex; color: {{brand}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="10.5" r="2.1"></circle><circle cx="9.8" cy="6" r="2.1"></circle><circle cx="14.2" cy="6" r="2.1"></circle><circle cx="18" cy="10.5" r="2.1"></circle><path d="M12 12c-2.8 0-5.5 3.4-5.5 5.7 0 1.6 1.3 2.4 2.8 2.4 1.1 0 1.8-.6 2.7-.6s1.6.6 2.7.6c1.5 0 2.8-.8 2.8-2.4 0-2.3-2.7-5.7-5.5-5.7z"></path></svg></span>Walks</span>
+<span style="display: flex; color: #4A6B65"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"></path></svg></span>
+</div>
+<div class="num" style="display: flex; align-items: baseline; gap: 4px; margin-top: 8px; line-height: 1; font-weight: 800"><span style="font-size: 44px">24</span><span style="font-size: 17px; font-weight: 700; color: #4A6B65">min</span></div>
+<div style="margin-top: 6px; font-size: 13px; font-weight: 600; color: #4A6B65">1 walk · goal 60</div>
+<div aria-hidden="true" style="margin-top: 12px; display: flex; flex-direction: column; gap: 4px">
+<div style="height: 32px; display: flex; align-items: flex-end; justify-content: space-between">
+<span style="width: 12px; height: 26px; border-radius: 6px; background: #C9CBA6"></span>
+<span style="width: 12px; height: 32px; border-radius: 6px; background: #C9CBA6"></span>
+<span style="width: 12px; height: 18px; border-radius: 6px; background: #C9CBA6"></span>
+<span style="width: 12px; height: 30px; border-radius: 6px; background: #C9CBA6"></span>
+<span style="width: 12px; height: 28px; border-radius: 6px; background: #C9CBA6"></span>
+<span style="width: 12px; height: 22px; border-radius: 6px; background: #C9CBA6"></span>
+<span style="width: 12px; height: 13px; border-radius: 6px; background: {{brand}}"></span>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; color: #4A6B65">
+<span style="width: 12px; text-align: center">W</span><span style="width: 12px; text-align: center">T</span><span style="width: 12px; text-align: center">F</span><span style="width: 12px; text-align: center">S</span><span style="width: 12px; text-align: center">S</span><span style="width: 12px; text-align: center">M</span><span style="width: 12px; text-align: center; color: {{brand}}">T</span>
+</div>
+</div>
+</a>
+
+<section aria-label="Meds" style="box-sizing: border-box; border-radius: 28px; background: #FFF8DE; border: 1px solid rgba(1,62,55,0.08); padding: 16px; display: flex; flex-direction: column">
+<div style="height: 20px; display: flex; align-items: center; gap: 6px; font-size: 15px; font-weight: 700; color: #4A6B65"><span style="display: flex; color: {{brand}}"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><g transform="rotate(-45 12 12)"><rect x="3" y="8.5" width="18" height="7" rx="3.5"></rect><path d="M12 8.5v7"></path></g></svg></span>Meds</div>
+<div class="num" style="display: flex; align-items: baseline; gap: 4px; margin-top: 8px; line-height: 1; font-weight: 800"><span style="font-size: 44px">8:00</span><span style="font-size: 17px; font-weight: 700; color: #4A6B65">PM</span></div>
+<div style="margin-top: 6px; font-size: 13px; font-weight: 600; color: #4A6B65">Allergy pill · daily</div>
+<div aria-hidden="true" style="margin-top: 12px; display: flex; flex-direction: column; gap: 4px">
+<div style="height: 32px; display: flex; align-items: center; justify-content: space-between">
+<span style="width: 12px; height: 12px; border-radius: 6px; background: #C9CBA6"></span>
+<span style="width: 12px; height: 12px; border-radius: 6px; background: #C9CBA6"></span>
+<span style="width: 12px; height: 12px; border-radius: 6px; background: #C9CBA6"></span>
+<span style="width: 12px; height: 12px; border-radius: 6px; background: #C9CBA6"></span>
+<span style="width: 12px; height: 12px; border-radius: 6px; background: #C9CBA6"></span>
+<span style="width: 12px; height: 12px; border-radius: 6px; background: #C9CBA6"></span>
+<span style="width: 12px; height: 12px; box-sizing: border-box; border-radius: 6px; border: 2.5px solid {{brand}}"></span>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 11px; font-weight: 700; color: #4A6B65">
+<span style="width: 12px; text-align: center">W</span><span style="width: 12px; text-align: center">T</span><span style="width: 12px; text-align: center">F</span><span style="width: 12px; text-align: center">S</span><span style="width: 12px; text-align: center">S</span><span style="width: 12px; text-align: center">M</span><span style="width: 12px; text-align: center; color: {{brand}}">T</span>
+</div>
+</div>
+</section>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin-top: 16px; height: 44px">
+<h2 style="margin: 0; font-size: 20px; font-weight: 800">Today</h2>
+<button style="height: 44px; padding: 0; border: none; background: transparent; color: #4A6B65; font-size: 15px; font-weight: 700">See all</button>
+</div>
+<ul style="list-style: none; margin: 4px 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+<sc-if value="{{dinner}}" hint-placeholder-val="{{ false }}">
+<li style="display: flex; align-items: center; gap: 12px; height: 60px; box-sizing: border-box; padding: 0 14px 0 10px; border-radius: 22px; background: #FFF8DE; border: 1px solid rgba(1,62,55,0.08)">
+<span aria-hidden="true" style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 20px; background: {{brand}}; color: #FFEFB3; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 7 0 0 1-18 0z"></path><path d="M8 7.5h.01M12 6h.01M16 7.5h.01"></path></svg></span>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column"><span style="font-size: 16px; font-weight: 800">Dinner</span><span style="font-size: 13px; font-weight: 600; color: #4A6B65">by You</span></div>
+<span class="num" style="font-size: 14px; font-weight: 700; color: #4A6B65">Now</span>
+</li>
+</sc-if>
+<li style="display: flex; align-items: center; gap: 12px; height: 60px; box-sizing: border-box; padding: 0 14px 0 10px; border-radius: 22px; background: #FFF8DE; border: 1px solid rgba(1,62,55,0.08)">
+<span aria-hidden="true" style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 20px; background: #FFEFB3; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11h18a9 7 0 0 1-18 0z"></path><path d="M8 7.5h.01M12 6h.01M16 7.5h.01"></path></svg></span>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column"><span style="font-size: 16px; font-weight: 800">Breakfast</span><span style="font-size: 13px; font-weight: 600; color: #4A6B65">by You</span></div>
+<span class="num" style="font-size: 14px; font-weight: 700; color: #4A6B65">7:42 AM</span>
+</li>
+<li style="display: flex; align-items: center; gap: 12px; height: 60px; box-sizing: border-box; padding: 0 14px 0 10px; border-radius: 22px; background: #FFF8DE; border: 1px solid rgba(1,62,55,0.08)">
+<span aria-hidden="true" style="width: 40px; height: 40px; flex-shrink: 0; border-radius: 20px; background: #FFEFB3; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="10.5" r="2.1"></circle><circle cx="9.8" cy="6" r="2.1"></circle><circle cx="14.2" cy="6" r="2.1"></circle><circle cx="18" cy="10.5" r="2.1"></circle><path d="M12 12c-2.8 0-5.5 3.4-5.5 5.7 0 1.6 1.3 2.4 2.8 2.4 1.1 0 1.8-.6 2.7-.6s1.6.6 2.7.6c1.5 0 2.8-.8 2.8-2.4 0-2.3-2.7-5.7-5.5-5.7z"></path></svg></span>
+<div style="flex: 1; min-width: 0; display: flex; flex-direction: column"><span style="font-size: 16px; font-weight: 800">Morning walk · 24 min</span><span style="font-size: 13px; font-weight: 600; color: #4A6B65">by Sam</span></div>
+<span class="num" style="font-size: 14px; font-weight: 700; color: #4A6B65">7:10 AM</span>
+</li>
+</ul>
+
+<sc-if value="{{toast}}" hint-placeholder-val="{{ false }}">
+<div role="status" style="position: absolute; left: 20px; right: 20px; bottom: 112px; z-index: 3; height: 56px; box-sizing: border-box; padding: 0 6px 0 20px; border-radius: 28px; background: {{brand}}; color: #FFEFB3; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 12px 30px rgba(1,62,55,0.28)">
+<span style="font-size: 15px; font-weight: 700">Dinner logged for Milo</span>
+<button onClick="{{undo}}" style="height: 44px; padding: 0 18px; border: none; border-radius: 22px; background: #FFEFB3; color: {{brand}}; font-size: 15px; font-weight: 800">Undo</button>
+</div>
+</sc-if>
+
+<div class="navfade" aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 130px; z-index: 1"></div>
+<div style="position: absolute; left: 0; right: 0; bottom: 24px; z-index: 2; display: flex; justify-content: center">
+<nav aria-label="Main" style="height: 72px; padding: 0 8px; box-sizing: border-box; border-radius: 36px; background: {{brand}}; display: flex; align-items: center; gap: 6px; box-shadow: 0 10px 28px rgba(1,62,55,0.22)">
+<button aria-label="Home" aria-current="page" style="width: 48px; height: 48px; padding: 0; border: none; border-radius: 24px; background: rgba(255,239,179,0.16); color: #FFEFB3; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5 12 4l8 6.5V19a1 1 0 0 1-1 1h-4.5v-5.5h-5V20H5a1 1 0 0 1-1-1z"></path></svg></button>
+<button aria-label="History" style="width: 48px; height: 48px; padding: 0; border: none; border-radius: 24px; background: transparent; color: #B3BA8E; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg></button>
+<button aria-label="Log something" style="width: 60px; height: 60px; padding: 0; border: none; border-radius: 30px; background: #FFEFB3; color: {{brand}}; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></button>
+<button aria-label="Household" style="width: 48px; height: 48px; padding: 0; border: none; border-radius: 24px; background: transparent; color: #B3BA8E; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8.5" r="3.5"></circle><path d="M2.5 20a6.5 6.5 0 0 1 13 0"></path><path d="M16 5.2a3.2 3.2 0 0 1 0 6.3"></path><path d="M18 14.3A6.5 6.5 0 0 1 21.5 20"></path></svg></button>
+<button aria-label="Settings" style="width: 48px; height: 48px; padding: 0; border: none; border-radius: 24px; background: transparent; color: #B3BA8E; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h9M17 7h3M4 17h3M11 17h9"></path><circle cx="15" cy="7" r="2"></circle><circle cx="9" cy="17" r="2"></circle></svg></button>
+</nav>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"brand":{"editor":"color","default":"#013E37","options":["#013E37","#1B2F4E","#3E1F3A","#3B2A20"]},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+  componentWillUnmount() {
+    clearTimeout(this.toastTimer);
+  }
+  renderVals() {
+    const s = this.state || {};
+    const dinner = !!s.dinner;
+    return {
+      brand: this.props.brand ?? '#013E37',
+      dinner: dinner,
+      notDinner: !dinner,
+      toast: !!s.toast,
+      fedCount: dinner ? 2 : 1,
+      feed: () => {
+        clearTimeout(this.toastTimer);
+        this.setState({ dinner: true, toast: true });
+        this.toastTimer = setTimeout(() => this.setState({ toast: false }), 4500);
+      },
+      undo: () => {
+        clearTimeout(this.toastTimer);
+        this.setState({ dinner: false, toast: false });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
